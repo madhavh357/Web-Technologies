@@ -1,0 +1,85 @@
+body {
+    text-align: center;
+    background-color: lightgreen;
+}
+
+a {
+    margin-right: 100px;
+}
+
+a:last-child {
+    margin-right: 0px;
+}
+
+nav {
+    text-align: center;
+    margin: auto;
+    background-color: rgb(233, 181, 112);
+    padding: 10px;
+}
+
+hr {
+    background-color: blue;
+    height: 10px;
+}
+
+#footer {
+    position: absolute;
+    bottom: 0px;
+    width: 99%;
+}
+
+#div {
+    width: 300px;
+    height: 300px;
+    margin: auto;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(70, 70, 236);
+}
+
+a:active {
+    color: red;
+}
+
+#fields {
+    text-align: left;
+    display: inline-block;
+}
+#enter {
+    text-align: left;
+    display: inline-block;
+}
+
+label {
+    display: inline-block;
+    margin-bottom: 21px;
+}
+
+input {
+    margin-bottom: 10px;
+}
+
+textarea {
+    width: 200px;
+}
+
+input[type="submit"] {
+    width: 200px;
+    height: 100px;
+    color: white;
+    font-size: large;
+    background-color: blue;
+}
+
+
+input[type="button"] {
+    margin-top: 30px;
+    background-color: blue;
+    width: 200px;
+    height: 100px;
+    color: white;
+    font-size: large;
+}

@@ -1,0 +1,145 @@
+/*
+    124088
+    Q1 Project
+    CSS
+    Sources:
+    https://www.w3schools.com/css/css_navbar_horizontal.asp
+*/
+body {
+    font-family: 'Roboto';
+    text-align: center;
+    background-image: radial-gradient(rgb(75, 89, 207), white);
+    background-attachment: fixed;
+    margin: 0;
+}
+
+/* Nav bar styling from: https://www.w3schools.com/css/css_navbar_horizontal.asp */
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #27294b;
+    top: 0;
+    width: 100%;
+}
+
+li {
+    float: left;
+    width: 50%;
+}
+
+li a {
+    display: block;
+    padding: 8px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    
+    background-color: black;
+}
+
+.active {
+    background-color: rgb(0, 130, 216);
+    
+}
+
+.active:hover {
+    background-color: rgb(6, 58, 92);
+}
+
+p {
+    margin-top: 250px;
+    width: 34%;
+    display: inline-block;
+}
+
+figure {
+    position: absolute;
+}
+
+img {
+    width: 100%;
+    position: absolute;
+}
+
+#imsa {
+    width: 30%;
+    top: 200px;
+    left: 35%;
+}
+
+figcaption {
+    position: relative;
+    margin-top: 60%;
+    width: 130px;
+    text-align: center;
+}
+
+h4.lCar {
+    text-align: right;
+}
+
+#economy {
+    text-align: left;
+    position: absolute;
+    top: 18%;
+    left: 10%;
+    width: 300px;
+}
+
+#luxury {
+    position: absolute;
+    top: 18%;
+    right: 5%;
+    text-align: justify;
+    width: 300px;
+}
+
+h4 {
+    text-align: center;
+}
+
+#next {
+    position: absolute;
+    width: 15%;
+    top: 400px;
+    left: 42.5%;
+}
+
+fieldset {
+    text-align: center;
+    border-radius: 10px;
+    width: 40%;
+    position: absolute;
+    left: 7%;
+    top: 20%;
+}
+
+input {
+    margin-bottom: 2%;
+}
+
+label {
+    display: inline-block;
+    margin-bottom: 2%;
+}
+
+select {
+    height: 30px;
+}
+
+canvas {
+    border: 2px solid darkblue;
+    position: absolute;
+    top: 23%;
+    right: 7%;
+}
+
+input {
+    font-family: 'Roboto';
+}

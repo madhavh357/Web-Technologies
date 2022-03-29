@@ -1,0 +1,35 @@
+body {
+    text-align: center;
+    background-image: radial-gradient(lightblue, skyblue);
+    background-attachment: fixed;
+}
+
+table, th, td {
+    margin: auto;
+    border: 2px black solid;
+    border-collapse: collapse;
+    padding: 15px;
+}
+
+table {
+    width: 300px;
+    margin-bottom: 30px;
+}
+
+#data {
+    width: 80%;
+}
+
+th {
+    background-color: rgb(193, 231, 247);
+    
+}
+
+input[type="submit"] {
+    margin-bottom: 30px;
+}
+
+a {
+    display: inline-block;
+    margin-bottom: 20px;
+}

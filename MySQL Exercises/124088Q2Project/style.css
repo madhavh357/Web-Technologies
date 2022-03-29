@@ -1,0 +1,272 @@
+/* 124088 */
+body {
+    text-align: center;
+    font-family: Roboto;
+    background-image: linear-gradient(to right,#12c2e9, #c471ed, #f64f59);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#quizbody {
+    background-image: radial-gradient(rgb(206, 231, 255), rgb(146, 170, 214));
+}
+
+#homepage {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("home-background.png");
+    background-color: rgba(0, 0, 255, 0.5);
+}
+
+label {
+    display: block;
+    text-align: left;
+}
+
+img {
+    width: 30%;
+}
+
+input {
+    margin-bottom: 20px;
+    font-family: Roboto;
+}
+
+input[type="text"], input[type="email"], input[type="password"] {
+    width: 400px;
+    height: 30px;
+    border-radius: 5px;
+}
+
+a {
+    color: rgb(49, 29, 230);
+}
+
+a:active {
+    color: rgb(226, 8, 8);
+}
+
+#login {
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.6);
+    padding: 20px;
+    width: fit-content;
+    height: 510px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 50px;
+    border: 2px black solid;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    display: flex;
+}
+
+#message {
+    font-weight: bold;
+}
+
+#fields {
+    float: left;
+    height: 100%;
+}
+
+#fields.login h2 {
+    margin-bottom: 120px;
+}
+
+#fields.sendemail h2 {
+    margin-bottom: 130px;
+}
+
+#fields.reset label:first-child {
+    margin-top: 50px;
+}
+
+#forgot {
+    float: right;
+    margin-left: 50px;
+    height: 100%;
+    padding-left: 20px;
+    border-left: 3px black solid;
+}
+
+#forgot p:first-child {
+    margin-top: 220px;
+}
+
+#instructions {
+    background-color: rgba(255, 255, 255, 0.6);
+    width: fit-content;
+    margin: auto;
+    margin-top: 80px;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+ul li {
+    float: right;
+}
+
+ul li:first-child {
+    float: left;
+}
+  
+li a, li a:active {
+    display: block;
+    color: white;
+    padding: 16px;
+    text-decoration: none;
+    border-right: lightgrey 1px solid;
+}
+
+li a:hover {
+    background-color: #111;
+}
+
+li a.active {
+    background-color: rgb(22, 28, 105);
+}
+
+#home, #quizzes {
+    background-color: #333;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    float: left;
+    text-decoration: none;
+    color: white;
+}
+
+#home:hover, #quizzes:hover {
+    background-color: #111;
+}
+
+#home.active, #quizzes.active {
+    background-color: rgb(22, 28, 105);
+}
+
+#home.active:hover, #quizzes.active:hover {
+    background-color: rgb(12, 15, 58);
+}
+
+#nav {
+    width: 100%;
+    height: 51px;
+    background-color: #333;
+}
+
+.dropbtn {
+    background-color: #333;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropbtn:hover {
+    background-color: #111;
+}
+
+.dropdown {
+    float: right;
+    position: relative;
+    background-color: #333;
+    height: 51px;
+}
+
+.dropdown-content {
+    right: 0;
+    display: none;
+    position: absolute;
+    background-color: #333;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #111
+}
+
+.show {
+    display: block;
+}
+
+input[type="submit"], button[type="submit"] {
+    font-family: Roboto;
+    border-radius: 15px;
+    font-size: 14pt;
+    background: none;
+    border: 2px black solid;
+    height: 40px;
+    margin-bottom: 0px;
+}
+
+input[type="submit"]:active, button[type="submit"]:active {
+    background-color: white;
+}
+
+.menu {
+    width: 400px;
+    height: 500px;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 10px;
+}
+
+.menu button[type="submit"]:active {
+    color: black;
+}
+
+#csquiz {
+    float: left;
+    margin-left: 15%;
+}
+
+#musicquiz {
+    float: right;
+    margin-right: 15%;
+}
+
+label.quiz {
+    display: inline;
+    margin-right: 50px;
+}
+
+table, td {
+    margin: auto;
+    padding: 15px;
+    padding-right: 50px;
+    padding-left: 50px;
+}
+
+table {
+    margin-top: 100px;
+}
+
+td {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+#delete {
+    font-weight: bold;
+    font-size: 14pt;
+    padding: 5px;
+    background-color: rgba(216, 113, 237, 0.5);
+    border-radius: 10px;
+}

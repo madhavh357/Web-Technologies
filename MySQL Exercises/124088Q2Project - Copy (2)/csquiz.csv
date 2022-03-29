@@ -1,0 +1,20 @@
+What method do people use in deep learning instead of loops?,Vectorization,Writing code multiple times,None of these,Vectorization,loop
+What is the most popular programming language?,Python,JavaScript,Java,Python,popular
+Which of these is the slowest language?,C++,Python,JavaScript,Python,slow
+What is the time derivative of charge?,Voltage,Current,Resistance,Current,charge
+What is the best definition of an indefinite integral?,The set of functions whose derivative is the integrand,The area under the curve,The instantaneous rate of change of the function,The set of functions whose derivative is the integrand,indefinite
+What is the derivative of sin(x)?,cos(x),tan(x),sin(x),cos(x),sin
+What type of neural network deals with image recognition?,Artificial Neural Network,Recurrent Neural Network,Convolutional Neural Network,Convolutional Neural Network,image
+What is not an alternative to JavaScript?,TypeScript,Dart,PHP,PHP,alternative
+Is JavaScript well designed?,Yes,No,Better than Java,No,design
+What language are games commonly made in?,C++,Python,JavaScript,C++,game
+What type of language is HTML?,Programming Language,Scripting Language,Markup Language,Markup Language,html
+What is R used for?,Data analytics,Websites,Something else,Data analytics,r
+What is a Fourier transform?,A transform that decomposes functions by frequency,A transform that decomposes functions by amplitude,A Taylor Series,A transform that decomposes functions by frequency,fourier
+What is a differential equation?,An equation that relates a function to its derivative,A system of equations,Something else,An equation that relates a function to its derivative,differential
+What is MD5 most commonly used for?,Verifying the integrity of files,Passwords,Transactions,Verifying the integrity of files,md5
+What is recursion?,A for loop,A problem that uses solutions from smaller versions of it,Both,A problem that uses solutions from smaller versions of it,recursion
+What is blockchain?,A centralized data storage system,A series of transactions maintained across many devices,Current banking system,A series of transactions maintained across many devices,blockchain
+What is inheritance in computer science?,When a class is based on another class,When variables have global scope,The passing down of property,The passing down of property,inheritance
+What is polymorphism?,When a variable changes type,When someone changes the code,When objects of different types can be accessed through the same interface,When objects of different types can be accessed through the same interface,polymorphism
+What do PHP lines end with?,Semicolon,Colon,Nothing,Semicolon,end

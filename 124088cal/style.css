@@ -1,0 +1,25 @@
+/* my style sheet */
+body {background-image: url("background.png"); text-align: center;}
+
+table, tr, td {margin: auto; border: 5px inset rgba(44, 51, 54, 0.55); padding: 10px; border-collapse: collapse; font-size: 20pt; width: 700px;}
+
+input[type="button"] {width: 70px; height: 35px; border-radius: 10px; font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; font-size: 13pt;}
+input[type="button"]:hover{border-color: rgb(247, 90, 90);}
+
+/* styles = button */
+#enter {background-color: blue; color: white;}
+#enter:hover {border-color: white;}
+
+/* styles clear button */
+#clear {background-color: darkseagreen;}
+
+/* styles elements that take up 2 columns */
+input.c2 {width: 300px;}
+
+/* styles square root image/button */
+#sqrt {width: 70px; height: 35px; background-color: rgb(239, 239, 239); border-color: gray; border-style: inset; border-radius: 10px; border-width: 2px;}
+#sqrt:hover {border-color: rgb(247, 90, 90);}
+
+/* styles main text field where numbers go */
+input[type="text"] {border-radius: 5px; width: 690px; height: 50px; font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: 17pt; margin-bottom: 10px; text-align: right;}
+input[type="text"]:hover {border-color: rgb(224, 215, 215);}

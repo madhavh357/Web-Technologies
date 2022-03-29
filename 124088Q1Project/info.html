@@ -1,0 +1,83 @@
+<!-- 
+    124088
+    Q1 Project
+    info.html
+    User enters their information and completes payment
+
+    Sources:
+    https://artskydj.github.io/jsPDF/docs/jsPDF.html
+    https://www.w3schools.com/howto/howto_google_fonts.asp
+    https://www.w3schools.com/css/css_navbar_horizontal.asp
+    https://stackoverflow.com/questions/48534229/what-is-the-correct-input-type-for-credit-card-numbers
+ -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- jsPDF documentation: https://artskydj.github.io/jsPDF/docs/jsPDF.html -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
+        
+        <link rel="stylesheet" href="style.css" type="text/css">
+        <!-- Google fonts: https://www.w3schools.com/howto/howto_google_fonts.asp-->
+        <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+        <title>Checkout</title>
+    </head>
+
+    <body onload="info()">
+        <!-- Navbar from https://www.w3schools.com/css/css_navbar_horizontal.asp -->
+        <ul>
+            <li><a href="index.html">Choose a Car</a></li>
+            <li><a href="info.html" class="active">Checkout</a></li>
+        </ul>
+        
+        <form id="info" action="index.html" onsubmit="return makeInvoice()">
+            <fieldset>
+                <h2>Please fill out the following fields</h2>
+                <label>First Name:</label>
+				<input type="text" id="fName" value="John" required><br>
+
+                <label>Last Name:</label>
+				<input type="text" id="lName" value="Doe" required><br>
+
+                <label>Home address:</label>
+                <input type="text" id="address" value="111 St" required><br>
+
+                <label id="model">Car Model:</label><br>
+                <label id="price">Price:</label><br>
+                
+                <label>Color:</label>
+                <select id="color" required>
+                    <option value="Blue">Blue</option>
+                    <option value="Black">Black</option>
+                    <option value="Red">Red</option>
+                    <option value="White">White</option>
+                    <option value="Silver">Silver</option>
+                    <option value="Gray">Gray</option>
+                </select><br>
+
+                <label>Renting until</label>
+                <input type="date" id="until" value="2021-10-27" required><br>
+
+                <label>Phone Number:</label>
+                <input type="tel" id="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" value="555-123-3313" placeholder="xxx-xxx-xxxx" required><br>
+
+                <label>Email:</label>
+                <input type="email" id="email" value="example@email.com" placeholder="example@email.com" required><br>
+
+                <label>Credit card number:</label>
+                <!-- From https://stackoverflow.com/questions/48534229/what-is-the-correct-input-type-for-credit-card-numbers -->
+                <input id="ccn" type="tel" inputmode="numeric" pattern="[0-9\s]{13,19}" autocomplete="cc-number" maxlength="19" value="0000 0000 0000 0000" placeholder="xxxx xxxx xxxx xxxx" required><br>
+
+                <label>Pickup location (Select location on map): <strong id="loc">None selected</strong></label><br>
+
+                <label>Download Invoice:</label>
+                <input type="checkbox" id="download"><br>
+
+                <input type="submit" value="Finish Payment">
+                
+            </fieldset>
+            <canvas id="map" onmousedown="changeLoc(event)" width="500" height="500"></canvas>
+            
+        </form>
+    </body>
+    <script src="script.js"></script>
+</html>

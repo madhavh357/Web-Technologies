@@ -1,0 +1,124 @@
+<!-- 124088
+Review Exercise: review of HTML and CSS
+August 24, 2021
+
+-->
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Review Exercise 1</title>
+		<style>
+			body {text-align:center; background-color:rgb(209, 209, 209); font-size:12pt; font-family: sans-serif;}
+			
+			fieldset {background-color: rgb(255, 255, 224); margin-left: 2in; margin-right: 2in; border-radius: 15px; border: solid 10px yellow; margin-bottom: 5px;}
+			input {border-radius: 20px; border-width: 2px; border-color: lightgrey;}
+
+			input[type="number"] {width:60px}
+			input[type="submit"] {width:80px; height:40px;}
+			textarea {font-family: Georgia, 'Times New Roman', Times, serif; width: 5in; height: 1in; border-radius: 15px;}
+			#photo {border-radius: 0;}
+			#address {height: 0.75in;}
+
+		</style>
+	</head>
+	<body>
+		<!--
+			Creates a form that will go to response.html after
+		-->
+		<form action="response.html">
+			<h1>Please complete the following <span style="background-color: chartreuse;">volunteer form</span></h1>
+			<!--
+				File input for picture
+			-->
+			<fieldset>
+				<legend>Your face</legend>
+				<label for="photo">Your Image:</label>
+				<input type="file" id="photo"><br>
+				<label>Image Preview:</label>
+			</fieldset>
+			<!--
+				Text field for name
+				Radio input for gender
+				Number input for age
+				Date input for date of birth
+				Range input for height
+				Color input for favorite color
+			-->
+			<fieldset>
+				<legend>About You</legend>
+
+				<label>Name:</label>
+				<input type="text" placeholder="Your full name" required><br>
+
+				<label for="gender">Gender:</label>
+				<input type="radio"name="gender" value="Male" required>
+				<label>Male</label>
+				<input type="radio" name="gender" value="Female" required>
+				<label>Female</label><br>
+
+				<label>Age:</label>
+				<input type="number" min="10" value="20" required><br>
+
+				<label>Date of birth:</label>
+				<input type="date" required><br>
+
+				<label>Height:</label>
+				<label style="background-color: red; color: white;">Short</label>
+				<input type="range">
+				<label style="background-color: purple; color:white;">Tall</label><br>
+
+				<label>Favorite color:</label>
+				<input type="color"><br>
+
+			</fieldset>
+			<!--
+				Textarea to put volunteer experience
+				Select for drop down menu
+			-->
+			<fieldset>
+				<legend>Volunteer information</legend>
+
+				<label>What is your volunteer experience?</label><br>
+				<textarea></textarea><br>
+
+				<label for="countries">Why are you volunteering?</label>
+				<select required>
+					<option value="court">Court order</option>
+					<option value="school">To get credit for school</option>
+					<option value="help">To help the community</option>
+					<option value="other">Other</option>
+				</select>
+
+			</fieldset>
+			<!--
+				Email input for user email
+				Tel input for phone number
+				Textarea for address
+				Checkboxes for methods of contacting
+			-->
+			<fieldset>
+				<legend>Your contact information</legend>
+
+				<label>Email:</label>
+				<input type="email" required><br>
+
+				<label>Phone:</label>
+				<input type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required><br>
+
+				<label for="address">Address:</label><br>
+				<textarea id="address" required></textarea><br>
+				
+				<label>Method of contacting:</label>
+				<input type="checkbox">
+				<label>Email</label>
+				<input type="checkbox">
+				<label>Phone/text</label>
+			</fieldset>
+			<!--
+				Submit button that goes to next webpage
+			-->
+			<input type="submit">
+		</form>
+	</body>
+</html>

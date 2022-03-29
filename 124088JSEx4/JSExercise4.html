@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Page Title</title>
+        <!--
+            These two elements link the JavaScript file and the stylesheet
+        -->
+        <script src="script.js"></script>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+
+        <h1>My Real Time Animation</h1>
+        <h3>What is the current time?</h3>
+
+        <!--
+            This paragraph element displays the time once the string with the time is created in the JavaScript
+        -->
+        <p id="clock"></p>
+        <!--
+            This image displays the image that is specific to the time
+        -->
+        <img id="image"/><br/>
+
+        <!--
+            This text input lets the user enter the text that they want to be animated.
+            It uses the onmouseover attribute to run the animateString() function with animates the string
+        -->
+        <label for="message">Enter the text you want to animate when you hover over:</label>
+        <input type="text" id="message" onmouseover="animateString()" value="Javascript is a language "/>
+
+
+        <h2>Here is the animated text:</h2>
+        <!--
+            This paragraph displays the animated moving text
+        -->
+        <p id="animation"></p>
+        <!--
+            This button stops the animation when it is clicked
+        -->
+        <input type="button" id="stop" value="Stop Animation" onclick="stopString()"/>
+    </body>
+</html>

@@ -1,0 +1,36 @@
+<!-- 
+    124088
+    November 9, 2021
+    Cookies and Session in PHP
+ -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+
+    <!-- 
+        Session is stored on the server, while cookies are stored on the client side or the computer. A session variable
+        expires when the page is closed, while cookies have a set expiration date.
+        Session is safer because it is on the server, while cookies can be dangerous and can hack your computer because they are on the client side.
+     -->
+    <body>
+        <h1>Welcome to my page!</h1>
+        <h3>You get to select a cool car here!</h3>
+        <h2>Select a Model</h2>
+        <form action="order02.php" method="post">   
+            <label class="q">Please enter your name here:</label><br>
+            <label><span>required*</span></label>
+            <input type="text" name="name" required><br>
+
+            <label class="q">Please select a model</label><br>
+            <label><span>required*</span></label>
+            <input type="radio" name="model" value="mustang" required><label>Ford Mustang</label><br>
+            <input type="radio" name="model" value="subaru"><label>Subaru WRX STI</label><br>
+            <input type="radio" name="model" value="corvette"><label>Corvette</label><br>
+
+            <input type="submit" value="Your Choice">
+        </form>
+    </body>
+</html>

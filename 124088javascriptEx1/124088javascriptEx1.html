@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <title>JavaScript Webpage</title>
+
+            <style>
+                p, h1 {text-align: center;}
+                p {margin-bottom: 0px; margin-top: 0px;}
+
+                input[type="button"] {width: 100px; height: 50px; border-radius: 5px;}
+                input.color {margin-bottom: 30px;}
+               
+                #pur {background-color: rgb(177, 30, 177); color: pink;}
+                #blu {background-color: blue; color: yellow;}
+                #red {background-color: red; color: black;}
+                #gre {background-color: green; color: lightgray; margin-bottom: 0px;}
+
+                /* 
+                    Sets border to none so fieldset does not appear when the page loads
+                    Uses absolute position to make fielset appear between buttons 
+                */
+                fieldset {text-align: center; width: 400px; border: none; border-radius: 5px; margin: auto; margin-top: 120px; margin-bottom: 20px; position: absolute; top: 100px; left: 35%}
+                
+                #heading {margin-bottom: 50px;}
+                #paragraph {font-size: 20pt;}
+
+                /* Makes image smaller than original size */
+                img {width: 25%;}
+                #imgb {text-align: center;}
+            </style>
+
+            <script>
+                /*
+                    Takes 2 parameters: background color and text color
+                    Sets body style elements backgroundColor and color to color1 and color2 respectively
+                    Puts text telling color change, displays field set, and colors the fieldset border
+                */
+                function changeBackground(color1, color2)
+                {
+                    document.body.style.backgroundColor = color1;
+                    document.body.style.color = color2;
+                    document.getElementById("paragraph").innerHTML = "<strong>Background changed to "+color1+". Text changed to "+ color2 +".</strong>";
+                    document.getElementById("box").style.border= "3px inset";
+                    document.getElementById("box").style.borderColor= color2;
+                }
+
+                /*
+                    Gets img element from id
+                    Uses if else to determine which image to change to
+                */
+                function changeImage()
+                {
+                    var img = document.getElementById("myImage");
+                    if (img.src.match("horseshoe"))
+                    {
+                        img.src = "sedona.jpeg";
+                        img.alt = "Sedona";
+                    }
+                    else
+                    {
+                        img.src = "horseshoe.jpeg";
+                        img.alt = "Horseshoe Bend";
+                    }
+                }
+            </script>
+            
+        </head>
+    <body>
+        <h1 id="heading"></h1>
+        <script>
+            // When the page loads, it asks the user to enter their name. "Harry Potter" is the default value
+            let name = prompt("Please enter your name", "Harry Potter");
+            // Makes it required for the user to answer the prompt
+            while(name==null)
+            {
+                name = prompt("Please enter your name", "Harry Potter");
+            }
+            // Sets heading to include name
+            document.getElementById("heading").innerHTML="Hello "+ name +".<br>Welcome to my webpage!";
+        </script>
+
+        <!--
+            Creates the box where the paragraph will be
+        -->
+        <fieldset id="box"><p id="paragraph"></p></fieldset>
+
+        <!--
+            Creates buttons to change colors
+            Have different ids so they can be styled with different background colors and text colors
+            All in class "color" so they can share margin styles
+        -->
+        <input type="button" value="Purple" id="pur" class="color" onclick="changeBackground('purple', 'pink')"><br>
+        <input type="button" value="Blue" id="blu" class="color" onclick="changeBackground('darkblue', 'yellow')"><br>
+        <input type="button" value="Red" id="red" class="color" onclick="changeBackground('darkred', 'black')"><br>
+        <input type="button" value="Green" id="gre" class="color" onclick="changeBackground('green', 'lightgray')">
+
+        <!--
+            These elements are in a div so that they can be formatted differently than the other elements
+        -->
+        <div id="imgb">
+            <p>Changing my picture with a click:</p><br>
+            <img id = "myImage" src="horseshoe.jpeg" alt ="Horseshoe Bend"><br>
+            <input type="button" value="Change image" onclick="changeImage()">
+        </div>
+    </body>
+</html>

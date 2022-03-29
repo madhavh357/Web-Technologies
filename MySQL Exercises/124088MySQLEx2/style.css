@@ -1,0 +1,37 @@
+body {
+    text-align: center;
+    font-family: Roboto;
+    background-image: url("chalkboard.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+}
+
+input {
+    margin-bottom: 20px;
+}
+
+h2 {
+    margin-top: 50px;
+}
+
+h2:first-child {
+    margin-top: 30px;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    display: inline;
+    margin-right: 200px;
+}
+
+li:last-child {
+    margin-right: 30px;
+}
+
+a {
+    color: white;
+}

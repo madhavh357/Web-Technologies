@@ -1,0 +1,10 @@
+body {
+    background-color: burlywood;
+    text-align: left;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+input {
+    width: 150px;
+    height: 75px;
+}

@@ -1,0 +1,194 @@
+(window["canvasWebpackJsonp"]=window["canvasWebpackJsonp"]||[]).push([[169,3643],{"9Msf":function(t,e,i){"use strict"
+i.d(e,"a",(function(){return n}))
+function n(t){return t.replace(/[\\\^\$\*\+\?\.\(\)\|\{\}\[\]]/g,"\\$&")}},Ce78J:function(t,e,i){"use strict"
+var n=i("VTBJ")
+var o=i("ouhR")
+var r=i.n(o)
+var a=i("Y/W1")
+var d=i.n(a)
+var s=i("JiFB")
+var c=i("ik22")
+function h(t,e,i){const o=Object(n["a"])({},i)
+t.forEach(t=>{const n=e[t]
+const r=i[t]
+Array.isArray(n)&&Array.isArray(r)&&(o[t]=[...new Set(n.concat(r))])})
+return o}function _(t,e,i,o,r){const a=new s["a"](r,c["a"],t,e)
+const d=Object(n["a"])({},a.defaultConfig())
+return Object(n["a"])(Object(n["a"])({},d),h(i.optionsToMerge||[],d,i.tinyOptions))}var l=_
+var u=i("FNQM")
+const f={call(t,...e){if("exists?"===t)return true
+return this[t](...e)},focus(){if(void 0!==tinymce){const t=tinymce.get(this.getTextarea().id)
+t&&t.focus(true)}}}
+const g={show(){$("#editor_tabs").show()},hide(){$("#editor_tabs").hide()}}
+const w={wrapEditor(t){const e=Object(n["a"])(Object(n["a"])({},f),t)
+return Object.assign(t,e)},wrapSidebar(t){const e=Object(n["a"])(Object(n["a"])({},g),t)
+return Object.assign(t,e)}}
+var m=w
+var E=i("eVns")
+var C=i("stQK")
+const b={loadingPromise:null,preload(t){(window.requestIdleCallback||window.setTimeout)(()=>this.loadRCE(t))},loadOnTarget(t,e,i){const n=this.getTargetTextarea(t)
+const o=this.getRenderingTarget(n,e.getRenderingTarget)
+const r=this.createRCEProps(n,e)
+this.loadRCE(t=>{t.renderIntoDiv(o,r,t=>{t.tinymceOn("init",()=>i(n,m.wrapEditor(t)))})})},loadingCallbacks:[],RCE:null,loadRCE(t=(()=>{})){return Promise.all([i.e(3),i.e(4),i.e(6),i.e(5),i.e(9),i.e(10),i.e(12),i.e(18),i.e(20),i.e(36),i.e(61),i.e(92),i.e(3700)]).then(i.bind(null,"j/Fk")).then(t=>{this.RCE=t
+Object(u["a"])()
+return t}).then(()=>{this.loadingCallbacks.forEach(t=>t(this.RCE))
+this.loadingCallbacks=[]
+t(this.RCE)})},getTargetTextarea:t=>"textarea"===r()(t).get(0).type?r()(t).get(0):r()(t).find("textarea").get(0),getRenderingTarget(t,e){let i
+i="undefined"===typeof e?r()(t).parent().get(0):e(t)
+r()(i).addClass("ic-RichContentEditor")
+return i},_attrsToMirror(t){const e=["name"]
+const i=d.a.reduce(t.attributes,(t,e)=>{t[e.name]=e.value
+return t},{})
+return d.a.pick(i,e)},createRCEProps(t,e){var i,o,r,a,d
+const s=t.offsetWidth
+const c=t.offsetHeight||400
+c&&(e.tinyOptions=Object(n["a"])({height:c},e.tinyOptions||{}))
+const h=ENV.LOCALE
+const _=Object.keys(C["a"]).map(t=>({id:t,label:C["a"][t]})).sort((t,e)=>t.id===h?-1:e.id===h?1:t.label.localeCompare(e.label,h))
+const u={enabled:ENV.rce_auto_save,maxAge:Number.isNaN(ENV.rce_auto_save_max_age_ms)?36e5:ENV.rce_auto_save_max_age_ms}
+return{defaultContent:t.value||e.defaultContent,editorOptions:l.bind(null,s,t.id,e,null),language:ENV.LOCALE,mirroredAttrs:this._attrsToMirror(t),onFocus:e.onFocus,onBlur:e.onBlur,textareaClassName:t.className,textareaId:t.id,trayProps:Object(E["a"])(),languages:_,liveRegion:()=>document.getElementById("flash_screenreader_holder"),ltiTools:null===(i=window.INST)||void 0===i?void 0:i.editorButtons,autosave:e.autosave||u,instRecordDisabled:ENV.RICH_CONTENT_INST_RECORD_TAB_DISABLED,maxInitRenderedRCEs:e.maxInitRenderedRCEs,highContrastCSS:null===(o=window.ENV)||void 0===o?void 0:o.url_for_high_contrast_tinymce_editor_css,use_rce_buttons_and_icons:!!(null!==(r=window.ENV)&&void 0!==r&&null!==(a=r.FEATURES)&&void 0!==a&&a.rce_buttons_and_icons),use_rce_a11y_checker_notifications:!!(null!==(d=window.ENV)&&void 0!==d&&d.use_rce_a11y_checker_notifications)}}}
+var x=b
+var T=i("eodz")
+function p(t,e,i){t.css("display","none")
+const n=e.onFocus
+e.onFocus=(...t)=>{n instanceof Function&&n(...t)}
+x.loadOnTarget(t,e,(e,n)=>{const o=j(t)
+const a=L(r()(e))
+a.data("remoteEditor",n)
+o.trigger(T["a"],n)
+i&&i(n)})}function v(t){const e=j(t)
+const i=e.attr("id")
+const n="tinymce-parent-of-"+i
+if(e.parent().attr("id")!==n)return e.wrap(`<div id='${n}' style='visibility: hidden'></div>`)}function k(){r()(".mce-resizehandle").attr("aria-hidden",true)}let R=0
+function y(){return"random_editor_id_"+R++}function S(t){const e=r()(t)
+const i="attr"in e?e.attr("id"):e.id
+i&&""!=i||e.attr("id",y())}function L(t){const e=j(t)
+const i=e.attr("id")
+if(!i||""==i)return e
+const n=r()("#"+i)
+if(n.length<=0)return e
+return n}const O={preloadRemoteModule:(t=(()=>{}))=>x.preload(t),loadNewEditor(t,e={},i){let n=j(t)
+if(n.length<=0)return
+S(n)
+e=r.a.extend({},e)
+const o=t=>{e.focus&&this.activateRCE(n)
+i&&i(t)}
+n=this.freshNode(n)
+if(e.manageParent){delete e.manageParent
+v(n)}p(n,e,o)
+k()},callOnRCE(t,e,...i){let n=j(t)
+n=this.freshNode(n)
+return Object(T["d"])(n,e,...i)},destroyRCE(t){let e=j(t)
+e=this.freshNode(e)
+Object(T["b"])(e)},closeRCE(t){this.callOnRCE(t,"RCEClosed")},activateRCE(t){let e=j(t)
+e=this.freshNode(e)
+Object(T["c"])(e)},freshNode:L,ensureID:S,node2jquery:j}
+function j(t){return t&&t.length?t:r()(t)}e["a"]=O},"R/in":function(t,e,i){"use strict"
+i.d(e,"a",(function(){return p}))
+var n=i("An8g")
+var o=i("VTBJ")
+i("Y/W1")
+var r=i("HGxv")
+var a=i("8WeW")
+Object(a["a"])(JSON.parse('{"ar":{"EditorToggle":{"done":{"title":"انقر لإنهاء تعديل منطقة النص المنسقة"},"done_as_in_finished":"تم"}},"ca":{"EditorToggle":{"done":{"title":"Feu clic per finalitzar l\'edició de l\'àrea de text enriquit"},"done_as_in_finished":"Fet"}},"cy":{"EditorToggle":{"done":{"title":"Cliciwch i orffen golygu’r ardal testun cyfoethog"},"done_as_in_finished":"Wedi gorffen"}},"da":{"EditorToggle":{"done":{"title":"Klik for at afslutte redigering af RTF-område"},"done_as_in_finished":"Udført"}},"da-x-k12":{"EditorToggle":{"done":{"title":"Klik for at afslutte redigering af RTF-område"},"done_as_in_finished":"Udført"}},"de":{"EditorToggle":{"done":{"title":"Klicken, um die Bearbeitung des Rich-Text-Bereichs abzuschließen"},"done_as_in_finished":"Fertig"}},"el":{"EditorToggle":{"done":{"title":"Κάντε κλικ για να ολοκληρώσετε την επεξεργασία της περιοχής rich text."},"done_as_in_finished":"Ολοκληρώθηκε"}},"en-AU":{"EditorToggle":{"done":{"title":"Click to finish editing the rich text area"},"done_as_in_finished":"Done"}},"en-AU-x-unimelb":{"EditorToggle":{"done":{"title":"Click to finish editing the rich text area"},"done_as_in_finished":"Done"}},"en-CA":{"EditorToggle":{"done":{"title":"Click to finish editing the rich text area"},"done_as_in_finished":"Done"}},"en-GB":{"EditorToggle":{"done":{"title":"Click to finish editing the rich text area"},"done_as_in_finished":"Done"}},"en-GB-x-ukhe":{"EditorToggle":{"done":{"title":"Click to finish editing the rich text area"},"done_as_in_finished":"Done"}},"es":{"EditorToggle":{"done":{"title":"Haga clic para terminar de editar el área de texto con formato"},"done_as_in_finished":"Listo"}},"es-ES":{"EditorToggle":{"done":{"title":"Haga clic para terminar la edición del área de texto con formato"},"done_as_in_finished":"Hecho"}},"fa":{"EditorToggle":{"done":{"title":"برای پایان دادن به ویرایش قسمت دارای متن غنی کلیک کنید"},"done_as_in_finished":"انجام شد"}},"fi":{"EditorToggle":{"done":{"title":"Klikkaa lopettaaksesi sisältöalueen muokkauksen"},"done_as_in_finished":"Valmis"}},"fr":{"EditorToggle":{"done":{"title":"Cliquez pour finir de modifier la zone de texte enrichi."},"done_as_in_finished":"Terminé"}},"fr-CA":{"EditorToggle":{"done":{"title":"Cliquez pour finir de modifier la zone de texte enrichi."},"done_as_in_finished":"Terminé"}},"he":{"EditorToggle":{"done":{"title":"הקלקה לסיום עריכת איזור התוכן העשיר"},"done_as_in_finished":"בוצע"}},"ht":{"EditorToggle":{"done":{"title":"Klike pou fini modifikasyon zòn tèks rich la"},"done_as_in_finished":"Fini"}},"hu":{"EditorToggle":{"done":{"title":"Kattintson, hogy befejezze a gazdag szövegmező szerkesztését"},"done_as_in_finished":"Kész"}},"hy":{"EditorToggle":{"done":{"title":"Սեղմեք \\"հարստացված տեսքտի\\" խմբագրումը ավարտելու համար "},"done_as_in_finished":"Պատրաստ է"}},"is":{"EditorToggle":{"done":{"title":"Smella til að ljúka breytingum á mótuðum texta"},"done_as_in_finished":"Lokið"}},"it":{"EditorToggle":{"done":{"title":"Fai clic per terminare la modifica dell\'area di testo RTF"},"done_as_in_finished":"Fatto"}},"ja":{"EditorToggle":{"done":{"title":"クリックしてリッチ テキスト領域の編集を終了する"},"done_as_in_finished":"完了"}},"ko":{"EditorToggle":{"done":{"title":"클릭하면 서식 있는 텍스트 영역의 편집을 마침"},"done_as_in_finished":"마침"}},"mi":{"EditorToggle":{"done":{"title":"Pāwhiritia ki te whakaoti i te whakatika i te wāhi kuputuhi taonga"},"done_as_in_finished":"Kua mahia"}},"nb":{"EditorToggle":{"done":{"title":"Klikk for å fullføre redigeringen av riktekstområdet"},"done_as_in_finished":"Ferdig"}},"nb-x-k12":{"EditorToggle":{"done":{"title":"Klikk for å fullføre redigeringen av riktekstområdet"},"done_as_in_finished":"Ferdig"}},"nl":{"EditorToggle":{"done":{"title":"Klikken om het bewerken van Rich Text-gebied te voltooien"},"done_as_in_finished":"Gereed"}},"nn":{"EditorToggle":{"done":{"title":"Klikk her for å fullføre redigeringa av området for rikt tekstformat"},"done_as_in_finished":"Fullført"}},"pl":{"EditorToggle":{"done":{"title":"Kliknij, aby ukończyć edycję wzbogaconego obszaru tekstowego"},"done_as_in_finished":"Gotowe"}},"pt":{"EditorToggle":{"done":{"title":"Clique para concluir a edição da área de Rich Text"},"done_as_in_finished":"Feito"}},"pt-BR":{"EditorToggle":{"done":{"title":"Clique para finalizar a edição da área de conteúdo enriquecido"},"done_as_in_finished":"Feito"}},"ru":{"EditorToggle":{"done":{"title":"Щелкните, чтобы закончить редактирование форматированного текста"},"done_as_in_finished":"Готово"}},"sl":{"EditorToggle":{"done":{"title":"Kliknite, da dokončate urejanje območja z besedilom."},"done_as_in_finished":"Dokončano"}},"sv":{"EditorToggle":{"done":{"title":"Klicka för att slutföra redigering av RTF-området"},"done_as_in_finished":"Klar"}},"sv-x-k12":{"EditorToggle":{"done":{"title":"Klicka för att slutföra redigering av RTF-området"},"done_as_in_finished":"Klar"}},"th":{"EditorToggle":{"done":{"title":"คลิกเพื่อสิ้นสุดการแก้ไขพื้นที่ Rich Text"},"done_as_in_finished":"เสร็จสิ้น"}},"tr":{"EditorToggle":{"done":{"title":"Zengin metin alanında düzenlemeyi bitirmek için tıklayınız"},"done_as_in_finished":"Tamam"}},"uk":{"EditorToggle":{"done":{"title":"Натисніть, щоб завершити редагування області тексту"},"done_as_in_finished":"Готово"}},"zh-Hans":{"EditorToggle":{"done":{"title":"单击以完成编辑富文本区域"},"done_as_in_finished":"完成"}},"zh-Hant":{"EditorToggle":{"done":{"title":"按一下以完成編輯 RTF 區域"},"done_as_in_finished":"已完成"}}}'))
+i("jQeR")
+i("0sPK")
+var d=r["default"].scoped("EditorToggle")
+var s=i("ouhR")
+var c=i.n(s)
+var h=i("mX+G")
+var _=i.n(h)
+var l=i("qqwe")
+var u=i("q1tI")
+var f=i.n(u)
+var g=i("i8i4")
+var w=i.n(g)
+i("17x9")
+Object(a["a"])(JSON.parse('{"ar":{"SwitchEditorControl":{"switch_editor_html":"محرر HTML","switch_editor_rich_text":"محرر محتوى"}},"ca":{"SwitchEditorControl":{"switch_editor_html":"Editor d\'HTML","switch_editor_rich_text":"Editor de contingut enriquit"}},"cy":{"SwitchEditorControl":{"switch_editor_html":"Golygydd HTML","switch_editor_rich_text":"Golygydd Cynnwys Cyfoethog"}},"da":{"SwitchEditorControl":{"switch_editor_html":"HTML-editor","switch_editor_rich_text":"Rich Content Editor"}},"da-x-k12":{"SwitchEditorControl":{"switch_editor_html":"HTML-editor","switch_editor_rich_text":"Rich Content Editor"}},"de":{"SwitchEditorControl":{"switch_editor_html":"HTML-Editor","switch_editor_rich_text":"Rich-Content-Editor"}},"el":{"SwitchEditorControl":{"switch_editor_html":"Επεξεργαστής HTML","switch_editor_rich_text":"Επεξεργαστής Πλούσιου Περιεχομένου-rich content"}},"en-AU":{"SwitchEditorControl":{"switch_editor_html":"HTML Editor","switch_editor_rich_text":"Rich Content Editor"}},"en-AU-x-unimelb":{"SwitchEditorControl":{"switch_editor_html":"HTML Editor","switch_editor_rich_text":"Rich Content Editor"}},"en-CA":{"SwitchEditorControl":{"switch_editor_html":"HTML Editor","switch_editor_rich_text":"Rich Content Editor"}},"en-GB":{"SwitchEditorControl":{"switch_editor_html":"HTML Editor","switch_editor_rich_text":"Rich Content Editor"}},"en-GB-x-ukhe":{"SwitchEditorControl":{"switch_editor_html":"HTML Editor","switch_editor_rich_text":"Rich Content Editor"}},"es":{"SwitchEditorControl":{"switch_editor_html":"Editor HTML","switch_editor_rich_text":"Editor de contenido enriquecido"}},"es-ES":{"SwitchEditorControl":{"switch_editor_html":"Editor HTML","switch_editor_rich_text":"Editor de contenido enriquecido"}},"fa":{"SwitchEditorControl":{"switch_editor_html":"ویرایشگر HTML","switch_editor_rich_text":"ویرایشگر محتوای غنی"}},"fi":{"SwitchEditorControl":{"switch_editor_html":"HTML-editori","switch_editor_rich_text":"Monipuolinen sisältöeditori"}},"fr":{"SwitchEditorControl":{"switch_editor_html":"Éditeur HTML","switch_editor_rich_text":"Éditeur de texte enrichi"}},"fr-CA":{"SwitchEditorControl":{"switch_editor_html":"Éditeur HTML","switch_editor_rich_text":"Éditeur de texte enrichi"}},"he":{"SwitchEditorControl":{"switch_editor_html":"עורך HTML","switch_editor_rich_text":"עורך תוכן עשיר"}},"ht":{"SwitchEditorControl":{"switch_editor_html":"Editè HTML","switch_editor_rich_text":"Editè Kontni Rich"}},"hu":{"SwitchEditorControl":{"switch_editor_html":"HTML szerkesztő","switch_editor_rich_text":"Vizuális szövegszerkesztő"}},"hy":{"SwitchEditorControl":{"switch_editor_html":"HTML խմբագիր","switch_editor_rich_text":"Ֆորմատավորված տեքստի խմբագիր"}},"is":{"SwitchEditorControl":{"switch_editor_html":"HTML ritill","switch_editor_rich_text":"Rich Content ritill"}},"it":{"SwitchEditorControl":{"switch_editor_html":"Editor HTML","switch_editor_rich_text":"Editor di contenuti avanzati"}},"ja":{"SwitchEditorControl":{"switch_editor_html":"HTML エディタ","switch_editor_rich_text":"リッチ コンテンツ エディタ"}},"mi":{"SwitchEditorControl":{"switch_editor_html":"Editor HTML","switch_editor_rich_text":"Ētita Ihirangi Whai Rawa"}},"nb":{"SwitchEditorControl":{"switch_editor_html":"HTML-redigering","switch_editor_rich_text":"Rich innholdsredigering"}},"nb-x-k12":{"SwitchEditorControl":{"switch_editor_html":"HTML-redigering","switch_editor_rich_text":"Rich innholdsredigering"}},"nl":{"SwitchEditorControl":{"switch_editor_html":"HTML Editor","switch_editor_rich_text":"Rich Content Editor"}},"nn":{"SwitchEditorControl":{"switch_editor_html":"HTML-redigeringsprogram","switch_editor_rich_text":"Redigeringsprogram for rikt innhald"}},"pl":{"SwitchEditorControl":{"switch_editor_html":"Edytor HTML","switch_editor_rich_text":"Edytor wzbogaconej zawartości"}},"pt":{"SwitchEditorControl":{"switch_editor_html":"Editor HTML","switch_editor_rich_text":"Editor de conteúdo avançado"}},"pt-BR":{"SwitchEditorControl":{"switch_editor_html":"Editor de HTML","switch_editor_rich_text":"Editor de conteúdo avançado"}},"ru":{"SwitchEditorControl":{"switch_editor_html":"Редактор HTML","switch_editor_rich_text":"Редактор форматированного текста"}},"sl":{"SwitchEditorControl":{"switch_editor_html":"Urejevalnik HTML","switch_editor_rich_text":"Urejevalnik"}},"sv":{"SwitchEditorControl":{"switch_editor_html":"HTML-redigerare","switch_editor_rich_text":"Redigerare för formaterat innehåll"}},"sv-x-k12":{"SwitchEditorControl":{"switch_editor_html":"HTML-redigerare","switch_editor_rich_text":"Redigerare för formaterat innehåll"}},"th":{"SwitchEditorControl":{"switch_editor_html":"HTML Editor","switch_editor_rich_text":"Rich Content Editor"}},"tr":{"SwitchEditorControl":{"switch_editor_html":"HTML Düzenleyici","switch_editor_rich_text":"Zengin İçerik Editörü"}},"uk":{"SwitchEditorControl":{"switch_editor_html":"HTML-редактор","switch_editor_rich_text":"Редактор збагаченого контенту"}},"zh-Hans":{"SwitchEditorControl":{"switch_editor_html":"HTML 编辑器","switch_editor_rich_text":"富内容编辑器"}},"zh-Hant":{"SwitchEditorControl":{"switch_editor_html":"HTML 編輯器","switch_editor_rich_text":"多種格式的內容編輯器"}}}'))
+var m=r["default"].scoped("SwitchEditorControl")
+var E=i("Ce78J")
+class C extends f.a.Component{constructor(...t){super(...t)
+this.state={mode:"rce"}
+this.toggle=t=>{t.preventDefault()
+E["a"].callOnRCE(this.props.textarea,"toggle")
+"rce"===this.state.mode?this.setState({mode:"html"},()=>{this.switchLink.focus()}):this.setState({mode:"rce"},()=>{this.switchLink.focus()})}
+this.switchLinkText=()=>"rce"===this.state.mode?m.t("switch_editor_html","HTML Editor"):m.t("switch_editor_rich_text","Rich Content Editor")
+this.linkClass=()=>"rce"===this.state.mode?"switch-views__link switch-views__link__html":"switch-views__link switch-views__link__rce"}render(){return Object(n["a"])("div",{style:{float:"right"}},void 0,f.a.createElement("a",{ref:t=>this.switchLink=t,href:"#",className:this.linkClass(),onClick:this.toggle},this.switchLinkText()))}}C.displayName="SwitchEditor"
+var b=C
+E["a"].preloadRemoteModule()
+let x=0
+const T=()=>"editor-toggle-"+(x+=1)
+function p(t,e){this.editingElement(t)
+this.options=Object(o["a"])({doneText:d.t("done_as_in_finished","Done"),switchViews:true},e)
+this.options.view&&(this.view=this.options.view)
+this.textArea=this.createTextArea()
+this.textAreaContainer=c()("<div/>").append(this.textArea)
+this.options.switchViews&&(this.switchViews=this.createSwitchViews())
+this.done=this.createDone()
+this.content=this.getContent()
+this.editing=false}Object.assign(p.prototype,_.a.Events,{toggle(){return this.editing?this.display():this.edit()},getRceOptions(){const t=c.a.extend({focus:true,tinyOptions:this.options.tinyOptions||{}},this.options.rceOptions)
+this.options.editorBoxLabel&&(t.tinyOptions.aria_label=this.options.editorBoxLabel)
+return t},edit(){this.textArea.val(this.getContent())
+this.textAreaContainer.insertBefore(this.el)
+this.el.detach()
+this.done.insertAfter(this.textAreaContainer)
+E["a"].loadNewEditor(this.textArea,this.getRceOptions())
+this.textArea=E["a"].freshNode(this.textArea)
+this.editing=true
+return this.trigger("edit")},replaceTextArea(){this.el.insertBefore(this.textAreaContainer)
+E["a"].destroyRCE(this.textArea)
+this.textArea&&this.textArea.remove()
+this.textArea=this.createTextArea()
+this.textAreaContainer.append(this.textArea)
+return this.textAreaContainer.detach()},display(t){if(!(null!=t?t.cancel:void 0)){this.content=E["a"].callOnRCE(this.textArea,"get_code")
+this.textArea.val(this.content)
+this.el.html(this.content)}this.replaceTextArea()
+this.options.switchViews&&this.switchViews.detach()
+this.done.detach()
+this.editing=false
+return this.trigger("display")},editingElement(t){return this.el=t},getContent(){const t=c()("<div></div>").append(this.el.html())
+t.find(".hidden-readable").remove()
+return c.a.trim(t.html())},createTextArea:()=>c()("<textarea/>").css({width:"100%",minHeight:"110px"}).addClass("editor-toggle").attr("id",T()),createDone(){return c()("<div/>").addClass("edit_html_done_wrapper").append(c()("<a/>").text(this.options.doneText).attr("href","#").addClass("btn edit_html_done").attr("title",d.t("done.title","Click to finish editing the rich text area")).click(Object(l["a"])(()=>{E["a"].closeRCE(this.textArea)
+this.display()
+this.editButton&&this.editButton.focus()})))},createSwitchViews(){const t=Object(n["a"])(b,{textarea:this.textArea})
+const e=c()("<div class='switch-views'></div>")
+w.a.render(t,e[0])
+return e},cancel(){E["a"].closeRCE(this.textArea)}})},msTH:function(t,e,i){"use strict"
+var n=i("ouhR")
+var o=i.n(n)
+var r=i("Y/W1")
+var a=i.n(r)
+var d=i("gI0r")
+var s=i("HGxv")
+var c=i("8WeW")
+Object(c["a"])(JSON.parse('{"ar":{"user_content_aaf0fb5a":"محتوى المستخدم"},"ca":{"user_content_aaf0fb5a":"Contingut de l\'usuari"},"cy":{"user_content_aaf0fb5a":"Cynnwys Defnyddiwr"},"da":{"user_content_aaf0fb5a":"Brugerindhold"},"da-x-k12":{"user_content_aaf0fb5a":"Brugerindhold"},"de":{"user_content_aaf0fb5a":"Benutzer-Content"},"el":{"user_content_aaf0fb5a":"Περιεχόμενο Χρήστη"},"en-AU":{"user_content_aaf0fb5a":"User Content"},"en-AU-x-unimelb":{"user_content_aaf0fb5a":"User Content"},"en-CA":{"user_content_aaf0fb5a":"User Content"},"en-GB":{"user_content_aaf0fb5a":"User content"},"en-GB-x-lbs":{"user_content_aaf0fb5a":"User content"},"en-GB-x-ukhe":{"user_content_aaf0fb5a":"User content"},"es":{"user_content_aaf0fb5a":"Contenido del usuario"},"es-ES":{"user_content_aaf0fb5a":"Contenido del usuario"},"fa":{"user_content_aaf0fb5a":"محتوای کاربر"},"fi":{"user_content_aaf0fb5a":"Käyttäjän sisältö"},"fr":{"user_content_aaf0fb5a":"Contenu de l\'utilisateur"},"fr-CA":{"user_content_aaf0fb5a":"Contenu de l\'utilisateur"},"he":{"user_content_aaf0fb5a":"תוכן משתמש"},"ht":{"user_content_aaf0fb5a":"Kontni Itilizatè"},"hu":{"user_content_aaf0fb5a":"Felhasználói tartalom"},"is":{"user_content_aaf0fb5a":"Notandaefni"},"it":{"user_content_aaf0fb5a":"Contenuto utente"},"ja":{"user_content_aaf0fb5a":"ユーザーコンテンツ"},"mi":{"user_content_aaf0fb5a":"Ihirangi kaiwhakamahi"},"nb":{"user_content_aaf0fb5a":"Brukerinnhold"},"nb-x-k12":{"user_content_aaf0fb5a":"Brukerinnhold"},"nl":{"user_content_aaf0fb5a":"Gebruikersinhoud"},"nn":{"user_content_aaf0fb5a":"Brukarinnhald"},"pl":{"user_content_aaf0fb5a":"Zawartość użytkownika"},"pt":{"user_content_aaf0fb5a":"Conteúdo do Utilizador"},"pt-BR":{"user_content_aaf0fb5a":"Conteúdo do Usuário"},"ru":{"user_content_aaf0fb5a":"Контент пользователя"},"sl":{"user_content_aaf0fb5a":"Vsebina uporabnika"},"sv":{"user_content_aaf0fb5a":"Användarinnehåll"},"sv-x-k12":{"user_content_aaf0fb5a":"Användarinnehåll"},"th":{"user_content_aaf0fb5a":"เนื้อหาของผู้ใช้"},"tr":{"user_content_aaf0fb5a":"Kullanıcı İçeriği"},"uk":{"user_content_aaf0fb5a":"Контент користувача"},"zh-Hans":{"user_content_aaf0fb5a":"用户内容"},"zh-Hant":{"user_content_aaf0fb5a":"使用者內容"}}'))
+i("jQeR")
+i("0sPK")
+var h=s["default"].scoped("user_content")
+const _={translateMathmlForScreenreaders(t){var e,i
+if(!(null!==(e=ENV)&&void 0!==e&&null!==(i=e.FEATURES)&&void 0!==i&&i.new_math_equation_handling)){const e=o()("<div/>").html(t.attr("x-canvaslms-safe-mathml")).html()
+const i=o()('<span class="hidden-readable"></span>')
+i.html(e)
+return i}},toMediaCommentLink(t){const e=o()(`<a\n        id='media_comment_${Object(d["a"])(o()(t).data("media_comment_id"))}'\n        data-media_comment_type='${Object(d["a"])(o()(t).data("media_comment_type"))}'\n        class='instructure_inline_media_comment ${Object(d["a"])(t.nodeName.toLowerCase())}_comment'\n        data-alt='${Object(d["a"])(o()(t).attr("data-alt"))}'\n      />`)
+e.html(o()(t).html())
+return e},convert(t,e={}){const i=o()("<div />").html(t)
+i.find("video.instructure_inline_media_comment,audio.instructure_inline_media_comment").replaceWith((function(){return _.toMediaCommentLink(this)}))
+i.find("object.instructure_user_content:not(#kaltura_player) embed").remove()
+if(!e.forEditing){i.find("object.instructure_user_content,embed.instructure_user_content").replaceWith((function(){const t=o()(this)
+if(!t.data("uc_snippet")||!t.data("uc_sig"))return this
+const e=a.a.uniqueId("uc_")
+let i="/object_snippet"
+ENV.files_domain&&(i=`//${ENV.files_domain}${i}`)
+const n=o()(`<form\n            action='${Object(d["a"])(i)}'\n            method='post'\n            class='user_content_post_form'\n            target='${Object(d["a"])(e)}'\n            id='form-${Object(d["a"])(e)}'\n          />`)
+n.append(o()("<input type='hidden'/>").attr({name:"object_data",value:t.data("uc_snippet")}))
+n.append(o()("<input type='hidden'/>").attr({name:"s",value:t.data("uc_sig")}))
+o()("body").append(n)
+setTimeout(()=>n.submit(),0)
+return o()(`<iframe\n            class='user_content_iframe'\n            name='${Object(d["a"])(e)}'\n            style='width: ${Object(d["a"])(t.data("uc_width"))}; height: ${Object(d["a"])(t.data("uc_height"))};'\n            frameborder='0'\n            title='${Object(d["a"])(h.t("User Content"))}'\n          />`)}))
+i.find("img.equation_image").each((t,e)=>{const i=o()(e)
+const n=_.translateMathmlForScreenreaders(i)
+i.removeAttr("x-canvaslms-safe-mathml")
+i.after(n)})}return i.html()}}
+e["a"]=_}}])
+
+//# sourceMappingURL=169-c-155644fa3b.js.map

@@ -1,0 +1,6 @@
+body {text-align: center; background-color: cornflowerblue;}
+h1 {font-size: 40pt; margin-bottom: 50px;}
+h2 {font-weight: lighter;}
+p {font-weight: bold;}
+input {width: 100px}
+input[type="button"] {border-radius: 5px; height: 75px;}

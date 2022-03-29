@@ -1,0 +1,115 @@
+<!--
+    124088
+    Creating a calculator using HTML and CSS
+    Using external style sheet
+    August 30, 2021
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Calculator</title>
+        <link rel ="stylesheet" type="text/css" href = "style.css">
+    </head>
+    <body>
+
+        <h1>My Calculator</h1>
+        <form name = "calc">
+            <!--text input where numbers go-->
+            <input type="text" name="input">
+            <!--A hidden input to store value when "Mem" button is pressed--->
+            <input type="hidden" name="store">
+
+            <!--Table that contains calculator buttons-->
+            <table>
+                <!--
+                    First row - has memory and recall buttons
+                    Memory button sets the hidden input value to the text field value
+                    Recall button adds the value of the hidden variable to the end of the input string
+                    Each one takes up 2 columns
+                    The buttons work by using the onclick attribute
+                -->
+                <tr>
+                    <td colspan="2"><input type="button" value="Mem" class="c2" onclick="calc.store.value=calc.input.value"></td>
+                    <td colspan="2"><input type="button" value="Rcl" class="c2" onclick="calc.input.value+=calc.store.value"></td>
+                </tr>
+
+                <!--
+                    Second row - has 7, 8, 9, and * sign
+                    They add the string to the value of the text field "input"
+                -->
+                <tr>
+                    <td><input type="button" value="7" onclick="calc.input.value+='7'"></td>
+                    <td><input type="button" value="8" onclick="calc.input.value+='8'"></td>
+                    <td><input type="button" value="9" onclick="calc.input.value+='9'"></td>
+                    <td><input type="button" value="*" onclick="calc.input.value+='*'"></td>
+                    
+                </tr>
+                
+                <!--
+                    Third row - 4, 5, 6, and / sign
+                -->
+                <tr>
+                    <td><input type="button" value="4" onclick="calc.input.value+='4'"></td>
+                    <td><input type="button" value="5" onclick="calc.input.value+='5'"></td>
+                    <td><input type="button" value="6" onclick="calc.input.value+='6'"></td>
+                    <td><input type="button" value="/" onclick="calc.input.value+='/'"></td>
+                </tr>
+
+                <!--
+                    Fourth row - 1, 2, 3, and + sign
+                -->
+                <tr>
+                    <td><input type="button" value="1" onclick="calc.input.value+='1'"></td>
+                    <td><input type="button" value="2" onclick="calc.input.value+='2'"></td>
+                    <td><input type="button" value="3" onclick="calc.input.value+='3'"></td>
+                    <td><input type="button" value="+" onclick="calc.input.value+='+'"></td>
+                </tr>
+                
+                <!--
+                    Fifth row - 0, decimal point, x^2, and - sign
+                    x^2 sets calc.input.value to the current value times itself
+                -->
+                <tr>
+                    <td><input type="button" value="0" onclick="calc.input.value+='0'"></td>
+                    <td><input type="button" value="." onclick="calc.input.value+='.'"></td>
+                    <td><input type="button" value="x^2" onclick="calc.input.value=eval(calc.input.value)*eval(calc.input.value)"></td>
+                    <td><input type="button" value="-" onclick="calc.input.value+='-'"></td>
+                </tr>
+
+                <!--
+                    Sixth row - sin, cos, tan, and sqrt
+                    sin, cos, and tan replace the current calc.input.value with the sin, cos, or tan of it respectively
+                    sqrt is an image that acts as a button using the onclick attribute, and it uses Math.sqrt
+                -->
+                <tr>
+                    <td><input type="button" value="sin" onclick="calc.input.value=Math.sin(eval(calc.input.value)*Math.PI/180)"></td>
+                    <td><input type="button" value="cos" onclick="calc.input.value=Math.cos(eval(calc.input.value)*Math.PI/180)"></td>
+                    <td><input type="button" value="tan" onclick="calc.input.value=Math.tan(eval(calc.input.value)*Math.PI/180)"></td>
+                    <td><img src="sqrt.png" id="sqrt" onclick="calc.input.value=Math.sqrt(eval(calc.input.value))"></td>
+                </tr>
+
+                <!--
+                    Seventh row - ( and )
+                -->
+                <tr>
+                    <td colspan="2"><input type="button" value="(" class="c2" onclick="calc.input.value+='('"></td>
+                    <td colspan="2"><input type="button" value=")" class="c2" onclick="calc.input.value+=')'"></td>
+                </tr>
+
+                <!--
+                    Eighth row - clear and =
+                    Clear sets calc.input.value to 0
+                    = evaluates what is in the text field
+                -->
+                <tr>
+                    <td colspan="2"><input type="button" value = "clear" class="c2" id="clear" onclick="calc.input.value=''"></td>
+                    <td colspan="2"><input type="button" class="c2" id="enter" value="=" onclick="calc.input.value=eval(calc.input.value)"></td>
+
+                </tr>
+
+            </table>
+        </form>
+        
+
+    </body>
+</html>

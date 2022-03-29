@@ -1,0 +1,60 @@
+<!-- 
+    124088
+    November 1, 2021
+    Creating a simple PHP form and comparing post and get
+ -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Quiz</title>
+        <style>
+            body {
+                text-align: center;
+                background-color: rgb(248, 248, 248);
+            }
+
+            label.q {
+                font-weight: bold;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1>Web Tech Final Exam</h1>
+        <!-- 
+            When the method is changed to get, the form information goes into the url, so it goes into the cache and the browser history.
+            When the method is get, the form information is stored securely and does not go into the broweser history. Therfore, post is used with sensitive information.
+         -->
+        <form action="score.php" method="post">
+            <label class="q">Name:</label>
+            <input type="text" name="name" required><br>
+
+            <br><label class="q">1. What do all PHP variables start with?</label><br>
+            <input id="dollar" type="radio" name="var" value="dollar" required><label for="dollar">$</label><br>
+            <input id="underscore" type="radio" name="var" value="underscore"><label for="underscore">_</label><br>
+            <input id="num" type="radio" name="var" value="num"><label for="num">A number</label><br>
+
+            <br><label class="q">2. What does the print_r() function do?</label><br>
+            <input id="erase" type="radio" name="print" value="erase" required><label for="erase">It erases the document and prints the input</label><br>
+            <input id="hello" type="radio" name="print" value="hello"><label for="hello">It prints "Hello"</label><br>
+            <input id="print" type="radio" name="print" value="print"><label for="print">It prints variables in a more readable way</label><br>
+
+            <br><label class="q">3. True or false: JavaScript is a well designed language</label><br>
+            <input type="radio" id="true" name="js" value="true" required><label for="true">True</label><br>
+            <input type="radio" id="false" name="js" value="false"><label for="false">False</label><br>
+
+            <br><label class="q">4. Which is a valid PHP array declaration?</label><br>
+            <input id="let" type="radio" name="array" value="let" required><label for="let">let x = new Array();</label><br>
+            <input id="bracket" type="radio" name="array" value="bracket"><label for="bracket">$x = ["hello", "hi"];</label><br>
+            <input id="array" type="radio" name="array" value="array"><label for="array">$x = array("hello", "hi");</label><br>
+
+            <br><label class="q">5. Differentiate ln(x)</label><br>
+            <input id="1ln" type="radio" name="calc" value="1ln" required><label for="1ln">1/ln(x)</label><br>
+            <input id="1x" type="radio" name="calc" value="1x"><label for="1x">1/x</label><br>
+            <input id="e" type="radio" name="calc" value="e"><label for="e">e^x</label><br>
+
+            <input type="image" src="certify-me-1.png">
+        </form>
+        
+    </body>
+</html>

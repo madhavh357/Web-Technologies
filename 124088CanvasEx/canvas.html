@@ -1,0 +1,62 @@
+<!--
+    124088
+    Canvas Ex
+    October 1, 2021
+    Creates a canvas that can draw shapes, images, and text
+-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Canvas</title>
+        <style>
+            body {
+                background-color: rgb(17, 156, 126);
+            }
+            h1, h4 {
+                text-align: center;
+            }
+            canvas {
+                border: 2px solid blue;
+                position: absolute;
+                top: 20%;
+                left: 40%;
+            }
+            div {
+                background-image: linear-gradient(green, blue);
+                width: 230px;
+                height: 720px;
+                text-align: center;
+                margin-left: 50px;
+                margin-top: 50px;
+                position: absolute;
+                top: 30px;
+            }
+            input[type="button"] {
+                width: 200px;
+                height: 50px;
+                margin-top: 20px;
+            }
+        </style>
+        
+    </head>
+
+    <body>
+        <h1>My HTML Canvas</h1>
+        <h4>Please select a function</h4>
+        <canvas id="canvas" width="500" height="500"></canvas>
+        <div>
+            <input type="button" value="Draw Circle" onclick="drawCircle()"><br>
+            <input type="button" value="Draw Line" onclick="drawLine()"><br>
+            <input type="button" value="Draw Rectangle" onclick="drawRect()"><br>
+            <input type="button" value="Draw Text" onclick="drawText()"><br>
+            <input type="button" value="Draw Image" onclick="drawImg()"><br>
+            <input type="button" value="Draw Gradient" onclick="drawGradient()"><br>
+            <input type="button" value="Draw Multiple" onclick="drawMultiple()"><br>
+            <input type="button" value="Draw Sculpture" onclick="drawSculpture()"><br>
+            <input type="button" value="Random Call" onclick="randFunc()"><br>
+            <input type="button" value="Scale" onclick="scaleShape()"><br>
+        </div>
+    </body>
+    <script src="script.js"></script>
+</html>

@@ -1,0 +1,26 @@
+<!-- 
+    124088
+    PHP Exercise 2
+    November 29, 2021
+ -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+
+    <body>
+        <h1>Welecome to my record keeping page!</h1>
+        <h3>Enter your information here about the quiz</h3>
+        <form action="database.php" method="post">
+            <label>First Name:</label><input type="text" name="first"><br>
+            <label>Last Name:</label><input type="text" name="last"><br>
+            <label>Date of Test:</label><input type="date" name="date"><br>
+            <label>Score:</label><input type="number" name="score" min="0"><br>
+
+            <input type="submit">
+
+        </form>
+    </body>
+</html>

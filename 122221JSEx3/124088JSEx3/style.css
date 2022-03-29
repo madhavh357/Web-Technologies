@@ -1,0 +1,36 @@
+/*122221 & 124088 JSEx3 css page 9/8/21*/
+body
+{
+  text-align: center;
+  background-color: cornflowerblue;
+}
+h1
+{
+  font-size: 40pt;
+  margin-bottom: 50px;
+  color: rgb(32, 214, 102);
+}
+h2
+{
+  font-weight: lighter;
+}
+p
+{
+  font-weight: bold;
+}
+input
+{
+  width: 100px
+}
+input[type="button"]
+{
+  border-radius: 5px;
+  border: 3px inset rgb(116, 2, 209);
+  height: 75px;
+  color: blueviolet;
+  font-size: 17pt;
+}
+input[type="button"]:hover
+{
+  border: 3px inset rgb(48, 37, 202);
+}

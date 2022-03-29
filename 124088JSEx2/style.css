@@ -1,0 +1,12 @@
+body {text-align: center; background-color: #41B3A3;}
+h1, h2 {font-size: 35pt; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;}
+h3 {font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; font-size: 20pt;}
+#input {margin-bottom: 50px; font-size: 30pt;}
+#calc {width: 45%;}
+nav {background-color: gray; padding: 10px; text-align: left; font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif; font-size: 15pt;}
+a {margin-right: 30px;}
+input[type="button"] {border-radius: 5px; width: 100px; height: 80px; margin-top: 10px;}
+#creators {text-align: left;}
+p.home {font-size: larger; width: 30%; margin-top: 4%; margin-bottom: 5%; margin-right: 35%; margin-left: 35%; background-color: #E8A87C; padding: 1%; border-radius: 5px;}
+#calc1 {width: 10%;}
+#madlib-home {width: 10%;}

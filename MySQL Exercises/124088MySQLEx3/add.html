@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+
+    <body>
+        <h1>Please fill out the form</h1>
+        <form action="add.php" method="post">
+            <table>
+                <!-- Includes the necessary fields for the database -->
+                <tr>
+                    <td>Name</td>
+                    <td><input type="text" name="name" required></td>
+                </tr>
+
+                <tr>
+                    <td>Age</td>
+                    <td><input type="number" name="age" required></td>
+                </tr>
+
+                <tr>
+                    <td>Email</td>
+                    <td><input type="email" name="email" required></td>
+                </tr>
+            </table>
+            <input type="submit" value="Add Data To The Database">
+        </form>
+        <p>Go Home by clicking <a href="index.php">Home</a></p>
+    </body>
+</html>

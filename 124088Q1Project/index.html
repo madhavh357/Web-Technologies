@@ -1,0 +1,109 @@
+<!-- 
+    124088
+    10/13/2021
+    Web Tech Rental Car Q1 Project
+    index.html - User chooses a car
+
+    Sources:
+    https://www.w3schools.com/howto/howto_google_fonts.asp
+    https://www.w3schools.com/css/css_navbar_horizontal.asp
+ -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Rent a car!</title>
+        <script src="script.js"></script>
+        <link rel="stylesheet" href="style.css" type="text/css">
+        <!-- https://www.w3schools.com/howto/howto_google_fonts.asp -->
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    </head>
+
+    <body onload="init()">
+        <!-- Navbar from https://www.w3schools.com/css/css_navbar_horizontal.asp -->
+        <ul>
+            <li><a href="index.html" class="active">Choose a Car</a></li>
+            <li><a href="info.html">Checkout</a></li>
+        </ul>
+
+        <h1>Welcome to the IMSA Car Rental!</h1>
+        <h2 name="car">Select your car:</h2>
+        <img id="imsa" src="imsa.jpg" name="car">
+        
+        <h3 id="chose"></h4>
+        <a id="next" href="info.html"></a><br>
+        <p id="about"></p>
+        <div id="economy">
+            
+            <h3 class="ecar" name="car">Economy: <br> $29.99 per day</h3>
+
+            <figure id="civicf" class="ecar" name="car">
+                <img id="civic" name="0" src="civic.png" onclick="chooseCar('civic')">
+                <img id="civicx" class="x">
+                <figcaption id="civicc">Honda Civic</figcaption>
+            </figure>
+
+            <figure id="versaf" class="ecar" name="car">
+                <img id="versa" name="1" src="versa.png" onclick="chooseCar('versa')">
+                <img id="versax" class="x">
+                <figcaption id="versac">Nissan Versa</figcaption>
+            </figure>
+
+            <figure id="yarisf" class="ecar" name="car">
+                <img id="yaris" name="2" src="yaris.png" onclick="chooseCar('yaris')">
+                <img id="yarisx" class="x">
+                <figcaption id="yarisc">Toyota Yaris</figcaption>
+            </figure>
+
+            <figure id="corollaf" class="ecar" name="car">
+                <img id="corolla" name="3" src="corolla.png" onclick="chooseCar('corolla')">
+                <img id="corollax" class="x">
+                <figcaption id="corollac">Toyota Corolla</figcaption>
+            </figure>
+
+            <figure id="accentf" class="ecar" name="car">
+                <img id="accent" name="4" src="accent.png" onclick="chooseCar('accent')">
+                <img id="accentx" class="x">
+                <figcaption id="accentc">Hyundai Accent</figcaption>
+            </figure>
+
+            
+        </div>
+
+        <div id="luxury">
+            <h3 class="lcar" name="car">Luxury: <br> $49.99 per day</h3>
+            
+            <figure id="a7f" class="lcar" name="car">
+                <img id="a7" name="5" src="a7.png" onclick="chooseCar('a7')">
+                <img id="a7x" class="x">
+                <figcaption id="a7c">Audi A7</figcaption>
+            </figure>
+
+            <figure id="bmwf" class="lcar" name="car">
+                <img id="bmw" name="6" src="bmw.png" onclick="chooseCar('bmw')">
+                <img id="bmwx" class="x">
+                <figcaption id="bmwc">BMW 750</figcaption>
+            </figure>
+
+            <figure id="benzf" class="lcar" name="car">
+                <img id="benz" name="7" src="benz.png" onclick="chooseCar('benz')">
+                <img id="benzx" class="x">
+                <figcaption id="benzc">Mercedes-Benz C43 AMG</figcaption>
+            </figure>
+
+            <figure id="teslaf" class="lcar" name="car">
+                <img id="tesla" name="8" src="tesla.png" onclick="chooseCar('tesla')">
+                <img id="teslax" class="x">
+                <figcaption id="teslac">Tesla Model X</figcaption>
+            </figure>
+
+            <figure id="porschef" class="lcar" name="car">
+                <img id="porsche" name="9" src="porsche.png" onclick="chooseCar('porsche')">
+                <img id="porschex" class="x">
+                <figcaption id="porschec">Porsche Taycan</figcaption>
+            </figure>
+
+        </div>
+        
+        <br><input type='button' value='Clear selection' onclick='clearChoice()'>
+    </body>
+</html>

@@ -1,0 +1,45 @@
+<!-- 
+    122145 and 124088
+    October 15, 2021
+    JS Lab 2
+    The program fills a canvas with a histograms repeatedly with random heights
+ -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My canvas animation</title>
+        <style>
+            body {
+                text-align: center;
+                background-color: rgb(188, 143, 143);
+                color: rgb(165, 42, 42);
+            }
+
+            h1 {
+                margin-bottom: 50px;
+            }
+
+            canvas {
+                border: 3px inset red;
+            }
+
+            input {
+                margin-top: 20px;
+                width: 150px;
+                height: 60px;
+                font-size: 13pt;
+                color: rgb(165, 42, 42);
+            }
+        </style>
+        
+    </head>
+
+    <body>
+        <h1>Simple HTML5 Canvas Animation</h1>
+        <canvas id="canvas" width="800" height="500"></canvas><br>
+        <input type="button" value="start animation" onclick="startAnimation()">
+        <input type="button" value="stop animation" onclick="stopAnimation()">
+        <script src="animation.js"></script>
+    </body>
+    
+</html>
